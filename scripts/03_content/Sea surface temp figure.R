@@ -1,0 +1,21 @@
+#Build a asimple graph
+
+#load packages
+library(ggplot2)
+library(EVR628tools)
+
+#Load data
+data("data_heatwaves")
+
+#Build a plot
+p <- ggplot(data = data_heatwaves,
+       mapping = aes(x = year, y = temp_mean,
+                     group = paste(fishery, eu_rnpa))) +
+  geom_line()
+
+#Save my plot
+#by adding and running the p item - can see it in environment now
+
+#Export my plot
+ggsave(plot = p,
+       filename = "results/img/my_first_plot.png")
