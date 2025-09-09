@@ -27,11 +27,12 @@ p2 <- ggplot(data = data_heatwaves,
 
 p2
 
-
+#Facet graph plot with fishery boxes
 p3 <- ggplot(data = data_heatwaves,
              mapping = aes(x = year, y = temp_mean,
-                           group = paste(fishery, eu_rnpa))) +
-  geom_line() +
+                           group = paste(fishery, eu_rnpa),
+                           colour = fishery)) +
+  geom_line(linewidth=1.5) +
   facet_wrap(~ fishery, ncol=2, scales = "free_y")
 
 
@@ -45,3 +46,6 @@ ggsave(plot = p,
 
 ggsave(plot = p2,
        filename = "results/img/my_second_plot.png")
+
+ggsave(plot = p3,
+       filename = "results/img/my_third_plot.png")
