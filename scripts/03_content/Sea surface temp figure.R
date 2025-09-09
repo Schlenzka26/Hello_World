@@ -27,6 +27,15 @@ p2 <- ggplot(data = data_heatwaves,
 
 p2
 
+
+p3 <- ggplot(data = data_heatwaves,
+             mapping = aes(x = year, y = temp_mean,
+                           group = paste(fishery, eu_rnpa))) +
+  geom_line() +
+  facet_wrap(~ fishery, ncol=2, scales = "free_y")
+
+
+p3
 #Save my plot
 #by adding and running the p item - can see it in environment now
 
