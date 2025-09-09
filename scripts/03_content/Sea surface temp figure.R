@@ -13,6 +13,20 @@ p <- ggplot(data = data_heatwaves,
                      group = paste(fishery, eu_rnpa))) +
   geom_line()
 
+
+p
+
+#Modify plot Lina Aragón
+
+p2 <- ggplot(data = data_heatwaves,
+            mapping = aes(x = year, y = temp_mean,
+                          group = paste(fishery, eu_rnpa),
+                          colour = paste(fishery, eu_rnpa))) +
+  geom_line()
+
+
+p2
+
 #Save my plot
 #by adding and running the p item - can see it in environment now
 
