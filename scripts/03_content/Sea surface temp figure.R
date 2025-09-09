@@ -42,3 +42,6 @@ p3
 #Export my plot
 ggsave(plot = p,
        filename = "results/img/my_first_plot.png")
+
+ggsave(plot = p2,
+       filename = "results/img/my_second_plot.png")
